@@ -3,10 +3,6 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   origin {
     domain_name = var.bucket_regional_domain_name
     origin_id   = "S3Origin"
-
-    s3_origin_config {
-      origin_access_identity = "origin-access-identity/cloudfront/ABCDEFG1234567"
-    }
   }
 
   enabled             = true
